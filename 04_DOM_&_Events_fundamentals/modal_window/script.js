@@ -32,3 +32,7 @@ btnCloseModal.addEventListener('click', closeModal) // we are not calling the fu
 
 overlay.addEventListener('click', closeModal)
 
+
+// handling keypress event
+
+document.addEventListener()
