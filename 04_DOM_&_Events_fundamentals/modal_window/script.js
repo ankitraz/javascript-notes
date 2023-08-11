@@ -7,7 +7,28 @@ const btnCloseModal = document.querySelector('.close-modal')
 // to select all instance of that class just use 'queryselectorall'
 const btnsShowModal = document.querySelectorAll('.show-modal') // returns a nodeList which is kinda similar to arrays but not array.it will contain all the elements which class '.show-modal;
 
-
-for(let i = 0; i < btnsShowModal.length; i++){
-    console.log(btnsShowModal[i]);
+// fucntion for closing 
+const closeModal = function(){
+    modal.classList.add('hidden');
+    overlay.classList.add('hidden');
 }
+
+const openModal = function(){
+    console.log('Button clicked');
+
+    // adding and removing classes 
+    modal.classList.remove('hidden');
+    overlay.classList.remove('hidden');
+}
+
+
+console.log(btnsShowModal);
+
+for(let i = 0; i< btnsShowModal.length; i++){
+    btnsShowModal[i].addEventListener('click',openModal);
+}
+
+btnCloseModal.addEventListener('click', closeModal) // we are not calling the function closeModal here. // we should not use closeModal() (with a parenthesis here)
+
+overlay.addEventListener('click', closeModal)
+
