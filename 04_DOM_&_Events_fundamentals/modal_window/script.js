@@ -35,4 +35,10 @@ overlay.addEventListener('click', closeModal)
 
 // handling keypress event
 
-document.addEventListener()
+document.addEventListener('keydown', function(e){
+    console.log(e.key); // this will log the key pressed on the keyboard. javascript will automatically pass the event object to the handler function. we can name it anything we want. here we named it 'e'
+
+    if (e.key == 'Escape' && !modal.classList.contains('hidden')) {
+        closeModal();
+    }
+})
