@@ -27,3 +27,4 @@ const staff = ['Waiter', 'Chef', 'Waiter', 'Mananger', 'Chef', 'Waiter'];
 const staffUnique = [...new Set(staff)];
 
 console.log(staffUnique);
+
